@@ -3,7 +3,7 @@
 @font-face {font-family: 'TmoneyRegular'; src: url(../font/TmoneyRoundWindRegular.ttf) format('truetype');}
 @font-face {font-family: 'TmoneyBold'; src: url(../font/TmoneyRoundWindExtraBold.ttf) format('truetype');}
 
-html, head, body {margin: 0px; padding: 0px; --theme-color: #BB7447; --header-height: 200px; --header-title-height: 150px;}
+html, head, body, p {margin: 0px; padding: 0px; --theme-color: #BB7447; --header-height: 200px; --header-title-height: 150px;}
 
 a:link { color: black; text-decoration: none;}
 a:visited { color: black; text-decoration: none;}
@@ -13,34 +13,46 @@ a:hover { color: black; text-decoration: none;}
 ::selection {background: #eb915996; opacity: 0.3;}
 ::-moz-selection {background: #eb915996; opacity: 0.3;}
 
-body > div {background-color: sandybrown; margin: 0px; width: 100%; height: 100%;}
+body > div {margin: 0px; width: 100%; height: 100%;}
 
 /*
 *  div header
 */
-.shop-header {position: relative; height: var(--header-height); background-color: white; font-family: 'TmoneyBold';}
+#shop-header {position: relative; height: var(--header-height); background-color: white; font-family: 'TmoneyBold';}
 /*header title*/
-.shop-header-title {position: relative; height: var(--header-title-height);}
-.shop-title-logo {position: absolute; width: 100px; height: 100px; top:calc(50% - 50px); left: 50px;}
-.shop-title-logo > img {width: 100%;}
-.shop-title-text {position: absolute; top: calc(50% - 55px); left: 170px;}
-.shop-title-text > a > span {font-size: 80px; color: var(--theme-color);}
+#shop-header-title {position: relative; height: var(--header-title-height);}
+#shop-title-logo {position: absolute; width: 100px; height: 100px; top:calc(50% - 50px); left: 20%;}
+#shop-title-logo > img {width: 100%;}
+#shop-title-text {position: absolute; top: calc(50% - 55px); left: calc(20% + 120px);}
+#shop-title-text > a > span {font-size: 80px; color: var(--theme-color);}
 /*header search bar*/
-.shop-searchbar {position: absolute; background-color: white; width: 250px; height: 50px; border: 1px solid rgb(184, 184, 184); border-radius: 15px; top: calc(50% - 25px); right: 50px;}
-.shop-searchbar-bgtext {position: absolute; color: #bb734780; font-size: 15px; top: calc(50% - 10px); right: 12px;}
-.shop-searchbar-icon {position: absolute; width: 20px; height: 20px; top: calc(50% - 10px); left: 12px;}
-.shop-searchbar-icon > img {width: 100%;}
+#shop-searchbar {position: absolute; background-color: white; width: 250px; height: 50px; border: 1px solid rgb(184, 184, 184); border-radius: 15px; top: calc(50% - 25px); right: 20%;}
+#shop-searchbar-bgtext {position: absolute; color: #bb734780; font-size: 15px; top: calc(50% - 10px); right: 12px;}
+#shop-searchbar-icon {position: absolute; width: 20px; height: 20px; top: calc(50% - 10px); left: 12px;}
+#shop-searchbar-icon > img {width: 100%;}
 /*header top menu*/
-.shop-header-menu {position: absolute; border-top: 1px solid rgb(197, 197, 197); border-bottom: 1px solid black; top: calc(var(--header-title-height) - 2px); width: 100%; height: calc(var(--header-height) - var(--header-title-height));}
-.shop-header-menu > ul {position: absolute; display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: stretch;  list-style: none; margin: 0px; padding: 0px; width: 100%; height: 100%;}
-.shop-header-menu > ul > li {font-family: 'TmoneyRegular'; font-size: 18px; width: 150px; height: max-content; padding: 14.5px 0px; text-align: center; vertical-align: middle;}
+#shop-header-menu {position: absolute; border-top: 1px solid rgb(197, 197, 197); border-bottom: 1px solid black; top: calc(var(--header-title-height) - 2px); width: 100%; height: calc(var(--header-height) - var(--header-title-height));}
+#shop-header-menu > ul {position: absolute; display: flex; justify-content: space-evenly; text-align: center; list-style: none; margin: 0px 20%; padding: 0px; width: 60%; height: 100%;}
+#shop-header-menu > ul > li {font-family: 'TmoneyRegular'; font-size: 18px; height: max-content; margin: 0px 30px; padding: 14.5px 0px; text-align: center; vertical-align: middle;}
+
+.topfix {position: fixed !important; top: 0px !important; z-index: 100 !important;}
 
 /*
 *  div body
 */
-.shop-body {position: relative; background-color: hotpink;}
+#shop-body {position: relative; font-family: 'TmoneyRegular';}
+#shop-jumbotron {position:relative; width: 100%; height: 550px; background-color: cyan;}
+#shop-article {position: relative; width: 60%; margin: 0px 20%;}
+#shop-article-nav {position:relative; display: flex; justify-content: space-evenly; align-items: stretch; width: 100%; height: 180px; background-color:}
+.shop-article-nav-btn {position: relative; width: 33%;}
+.shop-article-nav-image {position: absolute; top: calc(50% - 50px); left: 30px; width: 100px; height: 100px; border-radius: 30px; background-color: rgb(252, 252, 252);}
+.shop-article-nav-image > img {width: 100%;}
+.shop-article-nav-text {position: absolute; top: calc(50% - 20px); right: 30px; text-align: right;}
+.shop-article-nav-titletext {font-size: 18px;}
+.shop-article-nav-subtext {font-size: 12px;}
 
+#shop-article-products {height: 300px;}
 /*
 *  div footer
 */
-.shop-footer {background-color: gray; height: 100px;}
+#shop-footer {background-color: rgb(197, 197, 197); height: 300px;}
