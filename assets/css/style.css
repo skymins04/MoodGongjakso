@@ -26,7 +26,7 @@ body > div {margin: 0px; width: 100%; height: 100%;}
 #shop-title-text {position: absolute; top: calc(50% - 55px); left: calc(20% + 120px);}
 #shop-title-text > a > span {font-size: 80px; color: var(--theme-color);}
 /*header search bar*/
-#shop-searchbar {position: absolute; background-color: white; width: 250px; height: 50px; border: 1px solid rgb(184, 184, 184); border-radius: 15px; top: calc(50% - 25px); right: 20%;}
+#shop-searchbar {position: absolute; background-color: white; width: 200px; height: 50px; border: 1px solid rgb(184, 184, 184); border-radius: 15px; top: calc(50% - 25px); right: 20%;}
 #shop-searchbar-bgtext {position: absolute; color: #bb734780; font-size: 15px; top: calc(50% - 10px); right: 12px;}
 #shop-searchbar-icon {position: absolute; width: 20px; height: 20px; top: calc(50% - 10px); left: 12px;}
 #shop-searchbar-icon > img {width: 100%;}
@@ -55,4 +55,19 @@ body > div {margin: 0px; width: 100%; height: 100%;}
 /*
 *  div footer
 */
-#shop-footer {background-color: rgb(197, 197, 197); height: 300px;}
+#shop-footer {font-family: 'TmoneyRegular'; background-color: rgb(231, 231, 231); height: 300px;}
+#shop-footer-left {float: left; width: 50%; padding: 20px 0px; border-bottom: 1px solid rgb(185, 185, 185);}
+#shop-footer-left > p {margin-left: 30px; padding: 10px 0px; font-size: 15px;}
+#shop-footer-left > p > a {font-family: 'TmoneyBold'; font-size: 25px;}
+#shop-footer-left > div {margin-left: 30px; padding: 10px 0px; display: flex; justify-content: space-between; width: 32%;}
+
+#shop-footer-right {float: right; width: 50%; padding: 40px 0px; border-bottom: 1px solid rgb(185, 185, 185);}
+#shop-footer-right > p {margin-right: 30px; padding: 9px 0px; font-size: 13px; text-align: right;}
+
+@media screen and (max-width: 1400px) {
+    #shop-title-logo {position: absolute; width: 100px; height: 100px; top:calc(50% - 50px); left: 5%;}
+    #shop-title-text {position: absolute; top: calc(50% - 55px); left: calc(5% + 120px);}
+    #shop-searchbar {position: absolute; background-color: white; width: 200px; height: 50px; border: 1px solid rgb(184, 184, 184); border-radius: 15px; top: calc(50% - 25px); right: 5%;}
+    #shop-header-menu > ul {position: absolute; display: flex; justify-content: space-evenly; text-align: center; list-style: none; margin: 0px; padding: 0px; width: 100%; height: 100%;}
+    #shop-article {position: relative; width: 100%; margin: 0px;}
+}
